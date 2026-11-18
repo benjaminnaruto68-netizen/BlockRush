@@ -3,34 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BlockRush — Browser Gaming</title>
+<title>BlockRush — Eaglercraft 26.3</title>
 <meta name="theme-color" content="#101722">
 <style>
 :root{--bg:#0a1018;--panel:#121d2a;--line:#26384b;--text:#eff6ff;--muted:#a5b6c9;--green:#59e391}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0,#1c3548,transparent 50%),var(--bg);color:var(--text);font-family:system-ui,Segoe UI,Arial,sans-serif}
 header{display:flex;align-items:center;justify-content:space-between;padding:15px max(16px,4vw);border-bottom:1px solid var(--line);background:#0c131dcc;position:sticky;top:0;z-index:10;backdrop-filter:blur(10px)}
 .brand{display:flex;gap:10px;align-items:center;font-weight:900;letter-spacing:.08em}.logo{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,#72efa8,#27a66b);color:#092316}
-nav{display:flex;gap:5px}nav a{color:var(--muted);text-decoration:none;padding:9px 12px;border-radius:9px}nav a:hover{background:#203043;color:white}
 main{max-width:1150px;margin:auto;padding:28px 18px 60px}.hero{border:1px solid var(--line);border-radius:22px;background:linear-gradient(110deg,#152638,#1c3946);padding:clamp(24px,5vw,54px)}.badge{color:var(--green);font-size:.8rem;font-weight:800;letter-spacing:.1em}.hero h1{font-size:clamp(2.6rem,8vw,5rem);letter-spacing:-.05em;line-height:.98;margin:15px 0}.hero h1 span{color:var(--green)}p{color:var(--muted);line-height:1.6}.hero p{max-width:570px;font-size:1.05rem}
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:11px;border:1px solid transparent;font-weight:800;text-decoration:none;cursor:pointer;font-size:1rem}.primary{background:var(--green);color:#062315}.secondary{background:#223348;border-color:#354b60;color:white}.actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:22px}
 .section-title{display:flex;align-items:center;justify-content:space-between;margin:28px 2px 14px;gap:12px}.section-title h2{margin:0}.section-title small{color:var(--muted)}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px}.card h3{margin:0 0 8px}.card p{margin:0 0 15px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.icon{font-size:1.6rem;margin-bottom:12px}
-.game-frame{width:100%;height:75vh;min-height:420px;border:0;background:#000;display:block}.game-shell{margin-top:14px;border:1px solid #34475c;border-radius:15px;overflow:hidden;background:#000}.game-toolbar{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#111b26;padding:12px;flex-wrap:wrap}.note{padding:12px;font-size:.9rem;background:#101822}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px}.card h3{margin:0 0 8px}.card p{margin:0 0 15px}
+.game-frame{width:100%;height:75vh;min-height:420px;border:0;background:#000;display:block}.game-shell{margin-top:14px;border:1px solid #34475c;border-radius:15px;overflow:hidden;background:#000}.game-toolbar{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#111b26;padding:12px;flex-wrap:wrap}.note{padding:12px;font-size:.9rem;background:#101822;color:var(--muted)}
 footer{text-align:center;color:#7f92a8;border-top:1px solid #1f2d3c;padding:24px}
-@media(max-width:600px){header{padding:12px}nav a{padding:8px;font-size:.85rem}main{padding-top:18px}.hero{border-radius:17px}.game-frame{height:68vh;min-height:350px}}
+@media(max-width:600px){header{padding:12px}main{padding-top:18px}.hero{border-radius:17px}.game-frame{height:68vh;min-height:350px}}
 </style>
 </head>
 <body>
-<header><div class="brand"><div class="logo">B</div><span>BLOCKRUSH</span></div><nav><a href="#home">Home</a><a href="#minecraft">Minecraft</a><a href="#games">Games</a></nav></header>
+<header><div class="brand"><div class="logo">B</div><span>BLOCKRUSH</span></div></header>
 <main id="home">
-<section class="hero"><div class="badge">BROWSER GAMING HUB</div><h1>PLAY. <span>BUILD.</span><br>RUSH.</h1><p>Jump into browser games from one place. Start with Minecraft and explore the portal as it grows.</p><div class="actions"><a class="btn primary" href="#game">⛏ PLAY EAGLERCRAFT IN BLOCKRUSH</a><a class="btn secondary" href="#games">Explore games ↓</a></div></section>
-<section id="minecraft"><div class="section-title"><h2>Featured: Eaglercraft 26.3</h2><small>Browser Minecraft</small></div>
-<div class="card"><h3>⛏ Eaglercraft 26.3</h3><p>We try to load the official game in this frame. If the game host blocks embedding, use the launch button below—it opens the game in a new tab so this BlockRush tab stays open.</p>
-<div class="actions"><a class="btn primary" href="https://dev.eaglercraft.com/play?version=26.3" target="_blank" rel="noopener noreferrer">▶ Launch Eaglercraft 26.3 in new tab</a><button class="btn secondary" type="button" id="fullscreenBtn">⛶ Fullscreen game frame</button></div>
-<div class="game-shell" id="game"><div class="game-toolbar"><strong>Game preview / embedded attempt</strong><a class="btn secondary" href="https://dev.eaglercraft.com/play?version=26.3" target="_blank" rel="noopener noreferrer">Open 26.3 separately</a></div>
-<iframe class="game-frame" id="eaglerFrame" title="Eaglercraft 26.3 embed attempt" src="https://dev.eaglercraft.com/play?version=26.3" allow="fullscreen; gamepad" loading="lazy"></iframe>
-<div class="note"><strong>Note:</strong> If the frame says it was blocked or refuses to connect, the Eaglercraft host does not permit embedding. The separate launch button above is the fallback and keeps BlockRush open in its original tab.</div></div></div></section>
-<section id="games"><div class="section-title"><h2>More games</h2><small>More titles coming</small></div><div class="grid"><div class="card"><div class="icon">🏎️</div><h3>Racing</h3><p>Racing games will be added here.</p></div><div class="card"><div class="icon">⚔️</div><h3>Action</h3><p>Action and arcade games will be added here.</p></div><div class="card"><div class="icon">🧩</div><h3>Arcade</h3><p>A growing collection of browser games.</p></div></div></section>
-</main><footer>BlockRush · Independent browser gaming project</footer><script>
+<section class="hero"><div class="badge">MINECRAFT IN YOUR BROWSER</div><h1>EAGLERCRAFT <span>26.3</span></h1><p>BlockRush is dedicated to Eaglercraft 26.3. No other games—just Minecraft.</p><div class="actions"><a class="btn primary" href="#game">⛏ Go to game</a><a class="btn secondary" href="https://dev.eaglercraft.com/play?version=26.3" target="_blank" rel="noopener noreferrer">Launch in new tab ↗</a></div></section>
+<section id="minecraft"><div class="section-title"><h2>Eaglercraft 26.3</h2><small>Only game on BlockRush</small></div>
+<div class="card"><p>Use the game area below. If the external game cannot load inside the frame, launch it in a new tab; BlockRush will remain open.</p>
+<div class="actions"><a class="btn primary" href="https://dev.eaglercraft.com/play?version=26.3" target="_blank" rel="noopener noreferrer">▶ Launch Eaglercraft 26.3</a><button class="btn secondary" type="button" id="fullscreenBtn">⛶ Fullscreen game area</button></div>
+<div class="game-shell" id="game"><div class="game-toolbar"><strong>Eaglercraft 26.3 game area</strong><a class="btn secondary" href="https://dev.eaglercraft.com/play?version=26.3" target="_blank" rel="noopener noreferrer">Open separately</a></div>
+<iframe class="game-frame" id="eaglerFrame" title="Eaglercraft 26.3" src="https://dev.eaglercraft.com/play?version=26.3" allow="fullscreen; gamepad" loading="lazy"></iframe>
+<div class="note">If the frame is blocked by the game host, use the Launch button. This page does not bypass website or network restrictions.</div></div></div></section>
+</main><footer>BlockRush · Eaglercraft 26.3</footer>
+<script>
 document.getElementById('fullscreenBtn').addEventListener('click',function(){const f=document.getElementById('eaglerFrame');if(f.requestFullscreen)f.requestFullscreen();else alert('Fullscreen is not supported by this browser.');});
 </script></body></html>
